@@ -29,3 +29,5 @@ struct CardInfo {
     let visibleFractionOfBottomCard: CGFloat
 }
 ```
+
+A full Demo is included in the `ContentView` of the Project.
