@@ -15,6 +15,8 @@
 		A12FDAC6247C93330099511F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12FDAC4247C93330099511F /* LaunchScreen.storyboard */; };
 		A12FDAD1247C93330099511F /* RGStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12FDAD0247C93330099511F /* RGStackTests.swift */; };
 		A12FDADC247C93330099511F /* RGStackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12FDADB247C93330099511F /* RGStackUITests.swift */; };
+		A12FDAEB247C93530099511F /* RGStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12FDAE9247C93530099511F /* RGStack.swift */; };
+		A12FDAEC247C93530099511F /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12FDAEA247C93530099511F /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		A12FDAD7247C93330099511F /* RGStackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RGStackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A12FDADB247C93330099511F /* RGStackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGStackUITests.swift; sourceTree = "<group>"; };
 		A12FDADD247C93330099511F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A12FDAE9247C93530099511F /* RGStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGStack.swift; sourceTree = "<group>"; };
+		A12FDAEA247C93530099511F /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				A12FDAB9247C93300099511F /* AppDelegate.swift */,
 				A12FDABB247C93300099511F /* SceneDelegate.swift */,
 				A12FDABD247C93300099511F /* ContentView.swift */,
+				A12FDAE9247C93530099511F /* RGStack.swift */,
+				A12FDAEA247C93530099511F /* Helpers.swift */,
 				A12FDABF247C93330099511F /* Assets.xcassets */,
 				A12FDAC4247C93330099511F /* LaunchScreen.storyboard */,
 				A12FDAC7247C93330099511F /* Info.plist */,
@@ -270,6 +276,8 @@
 				A12FDABA247C93300099511F /* AppDelegate.swift in Sources */,
 				A12FDABC247C93300099511F /* SceneDelegate.swift in Sources */,
 				A12FDABE247C93300099511F /* ContentView.swift in Sources */,
+				A12FDAEC247C93530099511F /* Helpers.swift in Sources */,
+				A12FDAEB247C93530099511F /* RGStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
