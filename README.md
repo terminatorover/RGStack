@@ -1,6 +1,6 @@
 # RGStack 
 
-This UI attemps to capture the Quibi Card Stack and the associated User Interaction. 
+This UI attempts to capture the Quibi Card Stack and the associated User Interaction. 
 
 ![Demo](RGStack.gif)
 
