@@ -1,3 +1,6 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 # RGStack 
 
 This UI attempts to capture the Quibi Card Stack and the associated User Interaction. 
