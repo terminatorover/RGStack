@@ -31,3 +31,7 @@ struct CardInfo {
 ```
 
 A full Demo is included in the `ContentView` of the Project.
+
+## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
