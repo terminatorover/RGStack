@@ -10,16 +10,16 @@
 import SwiftUI
 import UIKit
 
-protocol DefaultValue {
+public protocol DefaultValue {
     static var `default`: Self { get }
 }
 
-protocol ConfigurableCard: View {
+public protocol ConfigurableCard: View {
     associatedtype Data: DefaultValue
     static func new(data: Data?) -> Self
 }
 
-enum CardMachine {
+public enum CardMachine {
     enum Position {
         case back, front, bottom, off
     }
@@ -80,7 +80,7 @@ enum CardMachine {
     }
 }
 
-struct RGStack<CardView: ConfigurableCard>: View {
+public struct RGStack<CardView: ConfigurableCard>: View {
 
     init(data: [CardView.Data], cardInfo: CardMachine.CardInfo) {
         self.data = data
@@ -133,7 +133,7 @@ struct RGStack<CardView: ConfigurableCard>: View {
                       height: totalHeight)
     }
 
-    var body: some View {
+    public var body: some View {
         let configuration = currentConfiguration()
         return ZStack {
             ForEach(0...3, id: \.self) {
