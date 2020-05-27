@@ -20,11 +20,11 @@ public protocol ConfigurableCard: View {
 }
 
 public enum CardMachine {
-    enum Position {
+    public enum Position {
         case back, front, bottom, off
     }
 
-    struct Layout {
+    public struct Layout {
         let size: CGSize
         let offset: CGPoint
         let scale: CGFloat
@@ -33,14 +33,14 @@ public enum CardMachine {
         var animated: Bool = false
     }
 
-    struct CardInfo {
+    public struct CardInfo {
         let size: CGSize
         let gapDistance: CGFloat
         let minScaleForBackCard: CGFloat
         let visibleFractionOfBottomCard: CGFloat
     }
 
-    enum Movement {
+    public enum Movement {
         case forward(CGFloat)
         case backward(CGFloat)
         case none
@@ -75,7 +75,7 @@ public enum CardMachine {
         }
     }
 
-    enum Direction {
+    public enum Direction {
         case next, back
     }
 }
@@ -155,7 +155,7 @@ public struct RGStack<CardView: ConfigurableCard>: View {
 
 // MARK: Moving to the next card and going back to the preivous card
 
-extension RGStack {
+public extension RGStack {
 
     func move(to direction: CardMachine.Direction) {
         let newIndex = direction == .next ? index + 1 : index - 1
@@ -209,8 +209,8 @@ extension RGStack {
 
 // MARK: Buildling Configurations
 
-extension RGStack {
-    func configuration(with movement: CardMachine.Movement,
+public extension RGStack {
+    internal func configuration(with movement: CardMachine.Movement,
                        currentIndex: Int,
                        positions: [CardMachine.Position],
                        previousPositions: [CardMachine.Position]) -> RGStackConfiguration<CardView.Data> {
@@ -276,7 +276,7 @@ extension RGStack {
 
 // MARK: Handling the Ending of the Dragging Gesture
 
-extension RGStack {
+public extension RGStack {
     private func endedDrag(translation: CGSize, threshold: CGFloat) {
         let endMove: CardMachine.Movement = .init(variance(from: translation))
         switch endMove {
@@ -326,7 +326,7 @@ struct CardConfiguration<Data> {
 
 // MARK: Layout Initializer
 
-extension CardMachine.Layout {
+public extension CardMachine.Layout {
 
     init(_ position: CardMachine.Position, cardInfo info: CardMachine.CardInfo) {
         let cardSize = info.size
@@ -380,7 +380,7 @@ extension CardMachine.Layout {
 
 // MARK: Position Transition Specification
 
-extension CardMachine.Position {
+public extension CardMachine.Position {
 
     struct Transition {
         let position: CardMachine.Position
@@ -437,7 +437,7 @@ extension CardMachine.Position {
 
 // MARK: View Extension
 
-extension View {
+public extension View {
     func apply(layout: CardMachine.Layout) -> some View {
         let animation: Animation? = layout.animated ?
             .interactiveSpring(response: 0.25, dampingFraction: 0.75, blendDuration: 0.95) :
@@ -460,7 +460,7 @@ extension View {
 
 // MARK: Layout Interpolation
 
-extension CardMachine.Layout {
+public extension CardMachine.Layout {
     // swiftlint:disable identifier_name
     func interpolate(to: CardMachine.Layout,
                      progerss: CGFloat) -> CardMachine.Layout {
@@ -474,7 +474,7 @@ extension CardMachine.Layout {
 
 // MARK: Convenience Initializer
 
-extension RGStack {
+public extension RGStack {
     init(data: [CardView.Data],
          size: CGSize,
          gapDistance: CGFloat = 50,
@@ -487,3 +487,4 @@ extension RGStack {
                                         visibleFractionOfBottomCard: visibleFractionOfBottomCard)
     }
 }
+
