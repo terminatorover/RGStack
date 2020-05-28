@@ -13,7 +13,10 @@ CardStack is available through [CocoaPods](http://cocoapods.org). To install it,
 
 ```swift 
 import RGStack
+```
+### Simplest Setup
 
+```swift
 struct ContentView: View {
   let demos: [Demo]
   var body: some View {
