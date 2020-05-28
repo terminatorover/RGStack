@@ -7,7 +7,7 @@ This UI attempts to capture the Quibi Card Stack and the associated User Interac
 ### Required
 A View that conforms to the `ConfigurableCard` protocol
 
-CardStack is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
+RGStack is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'RGStack'
