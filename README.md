@@ -9,7 +9,13 @@ A View that conforms to the `ConfigurableCard` protocol
 
 ### The simplest setup
 
-```swift
+### CocoaPods
+
+CardStack is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
+
+```swift 
+import RGStack
+
 struct ContentView: View {
   let demos: [Demo]
   var body: some View {
