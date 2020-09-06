@@ -126,7 +126,7 @@ public struct RGStack<CardView: ConfigurableCard>: View {
         return -1 * (translation.height / (size.height + cardInfo.gapDistance))
     }
 
-    private func RGStackSize(style: CardMachine.CardInfo) -> CGSize {
+    private func stackSize(style: CardMachine.CardInfo) -> CGSize {
         let cardSize = style.size
         let totalHeight = ((1 + style.visibleFractionOfBottomCard) * cardSize.height) + style.gapDistance
         return CGSize(width: cardSize.width,
@@ -141,7 +141,7 @@ public struct RGStack<CardView: ConfigurableCard>: View {
                 .apply(layout: configuration[$0].layout)
             }
         }
-        .frame(width: RGStackSize(style: cardInfo).width, height: RGStackSize(style: cardInfo).height, alignment: .top)
+        .frame(width: stackSize(style: cardInfo).width, height: stackSize(style: cardInfo).height, alignment: .top)
         .on(dragged: { value in
             self.set(drag: self.variance(from: value.translation))
         }, ended: { value in
