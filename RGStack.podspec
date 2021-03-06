@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage      = "https://github.com/terminatorover/RGStack"
   
   s.platform      = :ios, "13.0"
-  s.source        = { :git => "https://github.com/terminatorover/RGStack.git", :tag => "v1.2" }
+  s.source        = { :git => "https://github.com/terminatorover/RGStack.git", :tag => "1.2" }
   s.frameworks    = "SwiftUI", "Foundation"
   s.source_files  = "RGStack/*.swift"
   s.module_name = "RGStack"
